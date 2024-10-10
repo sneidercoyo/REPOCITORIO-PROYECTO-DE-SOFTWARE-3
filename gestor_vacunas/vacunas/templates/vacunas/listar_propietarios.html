@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Propietarios</title>
+</head>
+<body>
+    <h1>Lista de Propietarios</h1>
+    <a href="{% url 'crear_propietario' %}">Añadir Propietario</a>
+    <ul>
+        {% for propietario in propietarios %}
+            <li>{{ propietario.nombre }} {{ propietario.apellido }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
