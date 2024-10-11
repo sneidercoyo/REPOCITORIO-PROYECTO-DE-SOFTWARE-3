@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title>Carnet de Vacunación</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Carnet de Vacunación de {{ mascota.nombre }}</h1>
+    <p>Propietario: {{ mascota.propietario.nombre }} {{ mascota.propietario.apellido }}</p>
+    <p>Cédula del propietario: {{ mascota.propietario.cedula }}</p>
+    <p>ID Mascota: {{ mascota.id }}</p>
+
+    <h2>Vacunas</h2>
+    <ul>
+        {% for vacuna in historial_vacunas %}
+            <li>{{ vacuna.vacuna.nombre }} - Aplicada el {{ vacuna.fecha_aplicacion }} - Estado: {{ vacuna.estado }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Animal Project</title>
+    {% load static %}
+    <!-- Cargar el archivo CSS para la página -->
+    <link rel="stylesheet" href="{% static 'css/nosotros.css' %}">
+    <!-- Cargar Bootstrap para estilos básicos -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Cargar fuentes personalizadas -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar responsivo -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'img/logo.jpg' %}" alt="Logo de la veterinaria" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'servicios' %}">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Registro/Login
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/admin">Médicos / veterinarios</a>
+                            <a class="dropdown-item" href="{% url 'login_usuarios' %}">Usuarios</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="container-wrapper">
+        
+        <!-- Título Animal Project -->
+        <section class="animal-project-section py-5 text-center">
+            <div class="container">
+                <h1 class="titulo-principal">Animal Project</h1>
+                <p>
+                    En Animal Project nos destacamos por nuestro compromiso, ética profesional y la calidad del servicio que brindamos a cada una de las mascotas que nos visitan. Nuestro enfoque está en el bienestar animal y en ofrecer un servicio completo y de confianza.
+                </p>
+                <p>
+                    Nuestra clínica veterinaria cuenta con un equipo multidisciplinario de expertos dedicados a proporcionar la mejor atención posible a cada paciente. Creemos en la importancia de la prevención y el cuidado integral, ofreciendo una amplia gama de servicios desde consultas generales hasta cirugías especializadas.
+                </p>
+                <p>
+                    En nuestras instalaciones modernas, nos aseguramos de contar con tecnología de punta que nos permite diagnosticar y tratar a nuestras mascotas de manera rápida y eficaz. Cada miembro del equipo trabaja con pasión y dedicación, asegurándose de que tu mascota reciba el mejor tratamiento posible.
+                </p>
+            </div>
+            <div class="divider-green"></div> <!-- Línea verde después del banner -->
+        </section>
+
+        <!-- Sección "Qué soñamos en Animal Project" centrada -->
+        <section class="section-small">
+            <h2 class="titulo-secundario">¿Qué soñamos en Animal Project?</h2>
+            <p>Nos visualizamos como una clínica líder en la región, reconocida por nuestro servicio integral y nuestro enfoque en el bienestar animal.</p>
+            <ul class="vision-list">
+                <li>Ser una clínica de referencia en el área metropolitana de Medellín</li>
+                <li>Estar entre los mejores empleadores del sector veterinario</li>
+                <li>Brindar un servicio especializado en emergencias y cuidados intensivos</li>
+            </ul>
+        </section>
+
+        <div class="divider-green"></div> <!-- Línea verde después del banner -->
+
+        <!-- Galería de imágenes -->
+        <section class="image-gallery py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{% static 'img/sobre_nosotros_1.jpeg' %}" alt="Veterinario con mascotas" class="gallery-img img-fluid rounded">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'img/sobre_nosotros_2.jpeg' %}" alt="Fachada de la clínica" class="gallery-img img-fluid rounded">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'img/sobre_nosotros_3.jpg' %}" alt="Perro en consulta" class="gallery-img img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección "Lo que caracteriza a Animal Project" centrada -->
+        <section class="section-small">
+            <h2 class="titulo-secundario">Lo que caracteriza a Animal Project</h2>
+            <p>
+                En Animal Project nos destacamos por nuestro compromiso, ética profesional y la calidad del servicio que brindamos a cada una de las mascotas que nos visitan.
+            </p>
+            <p>
+                Nuestra clínica cuenta con instalaciones de última tecnología y un equipo de profesionales dedicados a proporcionar el mejor cuidado a sus mascotas.
+            </p>
+        </section>
+
+        <!-- Botón de contacto WhatsApp -->
+        <div class="text-center py-3">
+            <button class="whatsapp-button" onclick="contactWhatsApp()">Contactar por WhatsApp</button>
+        </div>
+    </div>
+
+    <!-- Footer responsivo -->
+    <footer class="footer bg-dark text-white text-center py-3">
+        <p>© 2024 Animal Project, Mocoa, Putumayo - Todos los derechos reservados</p>
+        <p>Diseño y desarrollo por TEAM_ITP</p>
+    </footer>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script de WhatsApp -->
+    <script>
+        function contactWhatsApp() {
+            window.open('https://wa.me/573115504487', '_blank');
+        }
+    </script>
+
+</body>
+</html>

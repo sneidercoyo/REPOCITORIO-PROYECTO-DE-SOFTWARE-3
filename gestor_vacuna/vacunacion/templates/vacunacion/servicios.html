@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Animal Project</title>
+    {% load static %}
+    <!-- Cargar el archivo CSS responsivo para esta página -->
+    <link rel="stylesheet" href="{% static 'css/servicios.css' %}">
+    <!-- Cargar Bootstrap para agregar estilos básicos y facilitar la responsividad -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Fuente personalizada desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar responsivo -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'img/logo.jpg' %}" alt="Logo de la veterinaria" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'servicios' %}">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Registro/Login
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/admin">Médicos / veterinarios</a>
+                            <a class="dropdown-item" href="{% url 'login_usuarios' %}">Usuarios</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Título central -->
+    <div class="text-center my-4">
+        <h1 class="titulo-principal">Nuestros Servicios</h1>
+        <p>Descubre los servicios que ofrecemos para el bienestar de tu mascota.</p>
+    </div>
+
+    <!-- Carrusel de imágenes -->
+    <section id="imageCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#imageCarousel" data-slide-to="1"></li>
+            <li data-target="#imageCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'img/carrusel_1.webp' %}" class="d-block w-100" alt="Imagen 1">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/gato_vacuna.jpeg' %}" class="d-block w-100" alt="Imagen 2">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/perro_vacuna.png' %}" class="d-block w-100" alt="Imagen 3">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </section>
+
+    <!-- Divider verde debajo del banner -->
+    <div class="divider-green"></div> <!-- Línea verde después del banner -->
+
+    <!-- Contenido sobre vacunación -->
+    <section class="servicios-info py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Imagen del servicio -->
+                <div class="col-md-6">
+                    <img src="{% static 'img/vacuna_perro.jpg' %}" alt="Servicio de vacunación" class="img-fluid rounded">
+                </div>
+                <!-- Texto del servicio -->
+                <div class="col-md-6">
+                    <h2 class="titulo-secundario">Vacunación de Mascotas</h2>
+                    <p>
+                        La vacunación es una parte esencial del cuidado preventivo para nuestras mascotas. Protege a tu mascota de enfermedades graves y asegura que se mantenga saludable.
+                    </p>
+                    <p>
+                        La aplicación de vacunas no solo protege a tu mascota, sino también a otros animales y personas en su entorno. Es un método seguro y eficaz para prevenir la propagación de enfermedades.
+                    </p>
+                    <h3 class="subtitulo">¿Por qué es importante vacunar a tu mascota?</h3>
+                    <p>
+                        Las vacunas protegen a los animales de enfermedades altamente contagiosas que podrían ser fatales. Es vital seguir el calendario de vacunación recomendado por tu veterinario para mantener a tu mascota saludable y segura.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="links-section text-center">
+        <a href="{% url 'registrar_propietario' %}" class="btn btn-outline-primary">Registrar Propietario</a>
+        <a href="{% url 'registrar_mascota' %}" class="btn btn-outline-primary">Registrar Mascota</a>
+        <a href="{% url 'buscar_mascota' %}" class="btn btn-outline-primary">Buscar Mascota</a>
+    </div>
+
+    <!-- Footer responsivo -->
+    <footer class="footer bg-dark text-white text-center py-3">
+        <p>© 2024 Animal Project, Mocoa, Putumayo - Todos los derechos reservados</p>
+        <p>Diseño y desarrollo por TEAM_ITP</p>
+    </footer>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,369 @@
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Ícono de WhatsApp flotante */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-icon img:hover {
+    transform: scale(1.1);
+}
+
+/* Header y navegación */
+.navbar {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    max-width: 1200px; /* Establece un ancho máximo opcional */
+    padding: 20px; /* Ajusta el espacio interior */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto; /* Centra el contenido dentro del contenedor */
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Asegura que los enlaces también ocupen todo el ancho */
+    justify-content: space-around; /* Distribuye los enlaces a lo largo del nav */
+}
+.logo img {
+    height: 40px;
+}
+
+.dropdown-menu {
+    background-color: white;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Corrige cualquier posible problema de alineación con el menú desplegable */
+.navbar-nav .nav-item .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Responsividad adicional para mejorar el comportamiento en pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar-collapse {
+        flex-direction: column;
+    }
+
+    .dropdown-menu {
+        position: static;
+        float: none;
+    }
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-links li:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.registro-login a {
+    color: #00a8e8;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon {
+    margin-left: 15px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #00a9b0;
+    color: white;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cta-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+/* Sección de bienvenida */
+.welcome-section {
+    padding: 50px 0;
+    background-color: white;
+    text-align: center;
+}
+
+.welcome-section h2 {
+    font-size: 2.5em;
+    color: #00a9b0;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Banner de imagen */
+.image-banner img {
+    width: 90%;
+    height: auto;
+    border-radius: 30px;
+    object-fit: cover;
+    max-height: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Sección "¿Por qué elegir nuestra clínica veterinaria?" */
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: white;
+}
+
+.about-section h2 {
+    font-size: 2em;
+    color: #00a9b0;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.about-image img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-text .cta-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.about-text .cta-button:hover {
+    background-color: #45a049;
+}
+
+/* Enlaces debajo del contenido principal */
+.links-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin-top: 20px;
+}
+
+.links-section a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #00a9b0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.links-section a:hover {
+    background-color: #008b8f;
+}
+
+/* Pie de página */
+.footer {
+    background-color: #2c2342;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .hero-image img {
+        max-width: 80%;
+    }
+}

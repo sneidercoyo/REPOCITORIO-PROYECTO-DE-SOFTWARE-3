@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Project - Veterinaria en Mocoa</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'img/logo.jpg' %}" alt="Logo de la veterinaria" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'servicios' %}">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Registro/Login
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/admin">Médicos / veterinarios</a>
+
+                        
+                            <a class="dropdown-item" href="{% url 'login_usuarios' %}">Usuarios</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1>¿Tu mascota necesita vacunación?</h1>
+            <p>Protege la salud de tu mascota con nuestro servicio de vacunación veterinaria. Ofrecemos atención rápida y eficaz para asegurar que tu compañero esté siempre protegido. ¡Haz una cita ahora y asegura su bienestar!</p>
+            <a href="https://wa.me/573115504487" class="cta-button" target="_blank">¡Visítanos hoy mismo!</a>
+        </div>
+        <div class="hero-image">
+            <img src="{% static 'img/perro_baner.avif' %}" alt="Perro feliz con gafas de sol">
+        </div>
+    </main>
+
+    <!-- Sección de bienvenida a Animal Project -->
+    <section class="welcome-section">
+        <h2>¡Bienvenidos a Animal Project, Clínica Veterinaria en Mocoa, Putumayo!</h2>
+        <p>Entendemos que las emergencias no tienen horario. Nuestra clínica veterinaria está abierta los 7 días de la semana en Mocoa, Putumayo. Queremos asegurarte que, en los momentos de necesidad, siempre puedes contar con nosotros.</p>
+        <p>Contamos con un equipo de profesionales altamente capacitados y apasionados por el bienestar de tu mascota. Nos esforzamos en brindar atención veterinaria de calidad, desde vacunaciones hasta medicina preventiva, cirugías y más. Creemos que cada mascota es única y merece una atención personalizada.</p>
+    </section>
+
+    <!-- Nuevo banner de imagen -->
+    <section class="image-banner">
+        <img src="{% static 'img/nuevo_baner.jpg' %}" alt="Imagen descriptiva">
+    </section>
+
+    <!-- Sección "¿Por qué elegir nuestra clínica veterinaria?" -->
+    <section class="about-section">
+        <h2>¿Por qué elegir nuestra clínica veterinaria?</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="{% static 'img/equipo_veterinario.webp' %}" alt="Equipo veterinario">
+            </div>
+            <div class="about-text">
+                <p>En momentos de emergencia, es esencial contar con un equipo de profesionales dedicados y apasionados por los animales, listos para actuar de inmediato. Nuestra clínica está equipada con las últimas tecnologías para brindar atención precisa y efectiva.</p>
+                <p>Nos especializamos en situaciones de emergencia, consulta veterinaria, vacunación, hospitalización y cirugía. Con nosotros, tu mascota recibirá el respeto y el cuidado que merece.</p>
+                <a href="https://wa.me/573115504487" class="cta-button">¡Agenda tu cita!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enlaces debajo del contenido principal -->
+    
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2024 Animal Project, Mocoa, Putumayo - Todos los derechos reservados</p>
+            <p>Diseño y desarrollo por TEAM_ITP</p>
+        </div>
+    </footer>
+
+    <!-- Ícono de WhatsApp flotante -->
+    <a href="https://wa.me/573115504487" class="whatsapp-icon" target="_blank">
+        <img src="{% static 'img/whatsapp-icon.png' %}" alt="WhatsApp">
+    </a>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Mascota</title>
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Buscar Mascota</h2>
+        <form method="get">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Buscar</button>
+        </form>
+
+        {% if mascota %}
+            <h2>Mascota Encontrada</h2>
+            <p><strong>Nombre:</strong> {{ mascota.nombre }}</p>
+            <p><strong>Especie:</strong> {{ mascota.especie.nombre }}</p>
+            <p><strong>Propietario:</strong> {{ propietario.nombre }} {{ propietario.apellido }}</p>
+            <a href="{% url 'consultar_carnet' mascota.id %}">Ver Carnet de Vacunación</a>
+        {% endif %}
+    </div>
+</body>
+</html>
