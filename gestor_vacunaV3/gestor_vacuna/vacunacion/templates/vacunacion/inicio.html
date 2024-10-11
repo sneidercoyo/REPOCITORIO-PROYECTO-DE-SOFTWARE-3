@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Inicio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+    <h1>Bienvenido a la Aplicación de Vacunación</h1>
+    <a href="{% url 'registrar_propietario' %}">Registrar Propietario</a>
+    <a href="{% url 'registrar_mascota' %}">Registrar Mascota</a>
+    <a href="{% url 'buscar_mascota' %}">Buscar Mascota</a>
+</body>
+</html>

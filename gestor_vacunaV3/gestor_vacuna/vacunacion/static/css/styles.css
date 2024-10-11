@@ -1,0 +1,22 @@
+/* static/css/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+h1 {
+    color: #333;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+form {
+    margin: 20px 0;
+}
